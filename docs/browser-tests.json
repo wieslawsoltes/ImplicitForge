@@ -116,7 +116,7 @@
       "status": "passed"
     }
   ],
-  "durationSeconds": 29.24,
+  "durationSeconds": 25.18,
   "pageErrors": [],
   "consoleErrors": [],
   "gpuValidation": "Not exercised: GPU APIs unavailable in managed test browser. Run tests/gpu.html on a WebGPU-capable secure origin."
