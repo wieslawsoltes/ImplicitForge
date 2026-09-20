@@ -1,0 +1,93 @@
+name: Import complete ImplicitForge source
+on:
+  push:
+    branches: [main]
+    paths: ['.transfer/**', '.github/workflows/import-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: import-implicitforge
+  cancel-in-progress: false
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Restore verified source files
+        run: |
+          python <<'PY'
+          import hashlib, io, lzma, pathlib, tarfile
+          parts = sorted(pathlib.Path('.transfer').glob('part-*.bin'))
+          assert len(parts) == 12, 'Expected twelve source chunks'
+          data = b''.join(p.read_bytes() for p in parts)
+          assert len(data) == 107328
+          assert hashlib.sha256(data).hexdigest() == '559e932526b9948c5c966b20b2f0fe01693513895d89358f41b6ccbce035cf00', 'Source archive digest mismatch'
+          restored = []
+          with tarfile.open(fileobj=io.BytesIO(lzma.decompress(data)), mode='r:') as archive:
+              for entry in archive:
+                  path = pathlib.PurePosixPath(entry.name)
+                  assert entry.isfile() and not path.is_absolute() and '..' not in path.parts and '.git' not in path.parts
+                  if path.parts[0] == '.github':
+                      continue
+                  target = pathlib.Path(*path.parts)
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(archive.extractfile(entry).read())
+                  restored.append(str(target))
+          build = pathlib.Path('scripts/build.mjs')
+          old = "['index.html', 'app', 'packages', 'examples']"
+          text = build.read_text()
+          assert old in text
+          build.write_text(text.replace(old, "['index.html', 'app', 'packages', 'examples', 'docs', 'README.md', 'LICENSE', '.nojekyll']"))
+          readme = pathlib.Path('README.md')
+          readme.write_text(readme.read_text().replace('An actual hosted deployment is not included in this delivery.', 'GitHub Pages: [Open ImplicitForge](https://wieslawsoltes.github.io/ImplicitForge/). The Pages workflow builds and validates the application before deployment.'))
+          browser = pathlib.Path('tests/browser_smoke.py')
+          text = browser.read_text()
+          old = "args=['--no-sandbox','--disable-dev-shm-usage']"
+          assert old in text
+          browser.write_text(text.replace(old, old + "+os.environ.get('CHROMIUM_ARGS','').split()"))
+          print(f'Restored {len(restored)} source files; archive SHA-256 verified.')
+          PY
+      - name: Build all standalone packages and static site
+        run: npm run build
+      - name: Check JavaScript syntax
+        run: npm run check
+      - name: Run kernel and package regression tests
+        run: npm test | tee docs/unit-tests.tap
+      - name: Commit complete source and generated distributions
+        run: |
+          rm -rf .transfer
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- . ':!.github'
+          git commit -m 'feat: import complete ImplicitForge workbench, 12 standalone packages, examples and tests'
+          git push origin HEAD:main
+      - name: Install browser test runner
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Exercise workbench and refresh screenshots
+        env:
+          CHROMIUM_ARGS: --disable-gpu --disable-webgl
+        run: |
+          export CHROMIUM="$(python -c 'from playwright.sync_api import sync_playwright; p=sync_playwright().start(); print(p.chromium.executable_path); p.stop()')"
+          python tests/browser_smoke.py | tee docs/browser-tests.log
+      - name: Rebuild site with verification evidence
+        run: npm run build
+      - name: Commit refreshed browser evidence and documentation assets
+        run: |
+          git add -A -- . ':!.github'
+          if ! git diff --cached --quiet; then
+            git commit -m 'test: verify 21 browser workflows and refresh documentation screenshots'
+            git push origin HEAD:main
+          fi
+      - name: Upload verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ImplicitForge-import-verification
+          path: docs/
