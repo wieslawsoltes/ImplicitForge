@@ -1,0 +1,26 @@
+name: Validate ImplicitForge
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  kernels:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm run build
+      - run: npm run check
+      - run: npm test
+      - uses: actions/upload-artifact@v4
+        if: matrix.node == 22
+        with:
+          name: ImplicitForge-static-site
+          path: dist/

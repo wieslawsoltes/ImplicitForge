@@ -1,0 +1,52 @@
+name: Deploy GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build standalone packages, portable HTML and static site
+        run: npm run build
+      - name: Validate source syntax
+        run: npm run check
+      - name: Run kernel and package tests
+        run: npm test
+      - name: Identify the deployed commit
+        run: node --input-type=module -e 'import {writeFileSync} from "node:fs"; writeFileSync("dist/deployment.json", JSON.stringify({commit:process.env.GITHUB_SHA,repository:process.env.GITHUB_REPOSITORY,run:process.env.GITHUB_RUN_ID})+"\n")'
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy the validated site
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify published commit, modules, examples and documentation
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: node scripts/verify-pages.mjs "$SITE_URL" "$GITHUB_SHA"
