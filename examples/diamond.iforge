@@ -1,0 +1,87 @@
+{
+  "format": "implicitforge",
+  "version": 1,
+  "name": "Diamond / twisted column",
+  "description": "Diamond nodal sheet warped by a coordinate-space twist.",
+  "units": "mm",
+  "nodes": [
+    {
+      "id": "n_3997f571e86f",
+      "type": "box",
+      "name": "Column envelope",
+      "params": {
+        "size": [
+          32,
+          32,
+          56
+        ],
+        "radius": 4
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_804f092aca15",
+      "type": "diamond",
+      "name": "Diamond sheet",
+      "params": {
+        "cell": 15,
+        "thickness": 0.43
+      },
+      "inputs": {
+        "domain": "n_3997f571e86f"
+      },
+      "position": {
+        "x": 280,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_09e115987245",
+      "type": "twist",
+      "name": "Twisted diamond",
+      "params": {
+        "rate": 1.6
+      },
+      "inputs": {
+        "body": "n_804f092aca15"
+      },
+      "position": {
+        "x": 525,
+        "y": 35
+      }
+    }
+  ],
+  "root": "n_09e115987245",
+  "assets": {},
+  "domain": {
+    "min": [
+      -28,
+      -28,
+      -38
+    ],
+    "max": [
+      28,
+      28,
+      38
+    ]
+  },
+  "material": {
+    "name": "Aluminium 6061",
+    "density": 2.7,
+    "E": 69000,
+    "nu": 0.33,
+    "conductivity": 167
+  },
+  "view": {
+    "color": [
+      0.53,
+      0.65,
+      0.36
+    ],
+    "roughness": 0.32
+  }
+}

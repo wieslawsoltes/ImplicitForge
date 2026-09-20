@@ -1,0 +1,16 @@
+{
+  "name": "@forge/lattice",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "sideEffects": false,
+  "description": "ImplicitForge standalone lattice package"
+}

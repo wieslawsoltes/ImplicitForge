@@ -1,0 +1,590 @@
+
+> implicitforge-workspace@0.1.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: Hex8 element stiffness is symmetric and translations have zero energy
+ok 1 - Hex8 element stiffness is symmetric and translations have zero energy
+  ---
+  duration_ms: 3.434449
+  type: 'test'
+  ...
+# Subtest: Hex8 validates material and shape
+ok 2 - Hex8 validates material and shape
+  ---
+  duration_ms: 0.465261
+  type: 'test'
+  ...
+# Subtest: Steady conduction reproduces a linear insulated-bar solution
+ok 3 - Steady conduction reproduces a linear insulated-bar solution
+  ---
+  duration_ms: 13.732807
+  type: 'test'
+  ...
+# Subtest: Thermal convection with a source converges and balances power
+ok 4 - Thermal convection with a source converges and balances power
+  ---
+  duration_ms: 21.358718
+  type: 'test'
+  ...
+# Subtest: Linear cantilever FEM converges and agrees with a beam estimate
+ok 5 - Linear cantilever FEM converges and agrees with a beam estimate
+  ---
+  duration_ms: 38.83961
+  type: 'test'
+  ...
+# Subtest: Elastic displacement scales inversely with Young modulus
+ok 6 - Elastic displacement scales inversely with Young modulus
+  ---
+  duration_ms: 21.411472
+  type: 'test'
+  ...
+# Subtest: Disconnected floating components are diagnosed before solving
+ok 7 - Disconnected floating components are diagnosed before solving
+  ---
+  duration_ms: 1.559135
+  type: 'test'
+  ...
+# Subtest: Nonconvergence is reported rather than replaced with fabricated results
+ok 8 - Nonconvergence is reported rather than replaced with fabricated results
+  ---
+  duration_ms: 4.064383
+  type: 'test'
+  ...
+# Subtest: SIMP runs real stiffness solves, enforces volume and changes density
+ok 9 - SIMP runs real stiffness solves, enforces volume and changes density
+  ---
+  duration_ms: 50.38864
+  type: 'test'
+  ...
+# Subtest: Domain bounds and x-fast nodal grid contract
+ok 10 - Domain bounds and x-fast nodal grid contract
+  ---
+  duration_ms: 1.590591
+  type: 'test'
+  ...
+# Subtest: HTML escaping rejects markup injection
+ok 11 - HTML escaping rejects markup injection
+  ---
+  duration_ms: 0.172516
+  type: 'test'
+  ...
+# Subtest: Primitive distances and analytic normals
+ok 12 - Primitive distances and analytic normals
+  ---
+  duration_ms: 0.313436
+  type: 'test'
+  ...
+# Subtest: Trilinear volume sampling reproduces an affine field
+ok 13 - Trilinear volume sampling reproduces an affine field
+  ---
+  duration_ms: 0.199847
+  type: 'test'
+  ...
+# Subtest: Node construction preserves unspecified defaults
+ok 14 - Node construction preserves unspecified defaults
+  ---
+  duration_ms: 1.666594
+  type: 'test'
+  ...
+# Subtest: Typed connections, cycle rejection, rollback and unknown port rejection
+ok 15 - Typed connections, cycle rejection, rollback and unknown port rejection
+  ---
+  duration_ms: 0.668733
+  type: 'test'
+  ...
+# Subtest: Incomplete editable blocks are allowed but reachable compilation is strict
+ok 16 - Incomplete editable blocks are allowed but reachable compilation is strict
+  ---
+  duration_ms: 0.806217
+  type: 'test'
+  ...
+# Subtest: Snapshot transactions undo redo coalescing and invalid mutation rollback
+ok 17 - Snapshot transactions undo redo coalescing and invalid mutation rollback
+  ---
+  duration_ms: 1.413027
+  type: 'test'
+  ...
+# Subtest: Project roundtrip and schema rejection
+ok 18 - Project roundtrip and schema rejection
+  ---
+  duration_ms: 1.741716
+  type: 'test'
+  ...
+# Subtest: Shader program keys exclude numeric values but include graph structure
+ok 19 - Shader program keys exclude numeric values but include graph structure
+  ---
+  duration_ms: 1.746132
+  type: 'test'
+  ...
+# Subtest: Translate, rotate, scale, booleans and shell behavior
+ok 20 - Translate, rotate, scale, booleans and shell behavior
+  ---
+  duration_ms: 0.585169
+  type: 'test'
+  ...
+# Subtest: Field bindings alter geometric occupancy, not just display color
+ok 21 - Field bindings alter geometric occupancy, not just display color
+  ---
+  duration_ms: 0.161199
+  type: 'test'
+  ...
+# Subtest: Finite repetition has exactly the requested centred copies
+ok 22 - Finite repetition has exactly the requested centred copies
+  ---
+  duration_ms: 0.196261
+  type: 'test'
+  ...
+# Subtest: gyroid is periodic and its wall interval expands monotonically
+ok 23 - gyroid is periodic and its wall interval expands monotonically
+  ---
+  duration_ms: 0.127319
+  type: 'test'
+  ...
+# Subtest: schwarz is periodic and its wall interval expands monotonically
+ok 24 - schwarz is periodic and its wall interval expands monotonically
+  ---
+  duration_ms: 0.078367
+  type: 'test'
+  ...
+# Subtest: diamond is periodic and its wall interval expands monotonically
+ok 25 - diamond is periodic and its wall interval expands monotonically
+  ---
+  duration_ms: 0.086478
+  type: 'test'
+  ...
+# Subtest: neovius is periodic and its wall interval expands monotonically
+ok 26 - neovius is periodic and its wall interval expands monotonically
+  ---
+  duration_ms: 0.048242
+  type: 'test'
+  ...
+# Subtest: Beam lattice centre distances
+ok 27 - Beam lattice centre distances
+  ---
+  duration_ms: 0.139848
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: box
+ok 28 - Kernel coverage: box
+  ---
+  duration_ms: 0.690315
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: sphere
+ok 29 - Kernel coverage: sphere
+  ---
+  duration_ms: 0.417369
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: cylinder
+ok 30 - Kernel coverage: cylinder
+  ---
+  duration_ms: 0.331261
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: torus
+ok 31 - Kernel coverage: torus
+  ---
+  duration_ms: 0.409998
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: capsule
+ok 32 - Kernel coverage: capsule
+  ---
+  duration_ms: 0.340415
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: ellipsoid
+ok 33 - Kernel coverage: ellipsoid
+  ---
+  duration_ms: 0.428015
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: plane
+ok 34 - Kernel coverage: plane
+  ---
+  duration_ms: 0.36396
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: union
+ok 35 - Kernel coverage: union
+  ---
+  duration_ms: 0.831795
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: intersect
+ok 36 - Kernel coverage: intersect
+  ---
+  duration_ms: 0.29003
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: subtract
+ok 37 - Kernel coverage: subtract
+  ---
+  duration_ms: 0.272955
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: smoothUnion
+ok 38 - Kernel coverage: smoothUnion
+  ---
+  duration_ms: 0.310531
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: offset
+ok 39 - Kernel coverage: offset
+  ---
+  duration_ms: 0.337931
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: shell
+ok 40 - Kernel coverage: shell
+  ---
+  duration_ms: 0.267558
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: translate
+ok 41 - Kernel coverage: translate
+  ---
+  duration_ms: 0.297222
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: rotate
+ok 42 - Kernel coverage: rotate
+  ---
+  duration_ms: 0.24907
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: scale
+ok 43 - Kernel coverage: scale
+  ---
+  duration_ms: 0.300837
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: twist
+ok 44 - Kernel coverage: twist
+  ---
+  duration_ms: 0.384631
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: repeat
+ok 45 - Kernel coverage: repeat
+  ---
+  duration_ms: 0.312243
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: gyroid
+ok 46 - Kernel coverage: gyroid
+  ---
+  duration_ms: 0.321798
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: schwarz
+ok 47 - Kernel coverage: schwarz
+  ---
+  duration_ms: 0.528865
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: diamond
+ok 48 - Kernel coverage: diamond
+  ---
+  duration_ms: 0.292845
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: neovius
+ok 49 - Kernel coverage: neovius
+  ---
+  duration_ms: 0.314346
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: cubic
+ok 50 - Kernel coverage: cubic
+  ---
+  duration_ms: 2.321667
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: octet
+ok 51 - Kernel coverage: octet
+  ---
+  duration_ms: 0.314337
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: constant
+ok 52 - Kernel coverage: constant
+  ---
+  duration_ms: 0.303831
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: ramp
+ok 53 - Kernel coverage: ramp
+  ---
+  duration_ms: 0.379994
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: radial
+ok 54 - Kernel coverage: radial
+  ---
+  duration_ms: 0.320365
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: sine
+ok 55 - Kernel coverage: sine
+  ---
+  duration_ms: 0.335078
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: noise
+ok 56 - Kernel coverage: noise
+  ---
+  duration_ms: 0.283591
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: add
+ok 57 - Kernel coverage: add
+  ---
+  duration_ms: 0.263722
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: multiply
+ok 58 - Kernel coverage: multiply
+  ---
+  duration_ms: 0.28276
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: clamp
+ok 59 - Kernel coverage: clamp
+  ---
+  duration_ms: 0.278333
+  type: 'test'
+  ...
+# Subtest: Kernel coverage: volume
+ok 60 - Kernel coverage: volume
+  ---
+  duration_ms: 0.551829
+  type: 'test'
+  ...
+# Subtest: Example compiles and lays out: exchanger
+ok 61 - Example compiles and lays out: exchanger
+  ---
+  duration_ms: 0.631037
+  type: 'test'
+  ...
+# Subtest: Example compiles and lays out: gyroid
+ok 62 - Example compiles and lays out: gyroid
+  ---
+  duration_ms: 0.375127
+  type: 'test'
+  ...
+# Subtest: Example compiles and lays out: bracket
+ok 63 - Example compiles and lays out: bracket
+  ---
+  duration_ms: 0.739277
+  type: 'test'
+  ...
+# Subtest: Example compiles and lays out: toroid
+ok 64 - Example compiles and lays out: toroid
+  ---
+  duration_ms: 0.361146
+  type: 'test'
+  ...
+# Subtest: Example compiles and lays out: octet
+ok 65 - Example compiles and lays out: octet
+  ---
+  duration_ms: 0.632048
+  type: 'test'
+  ...
+# Subtest: Example compiles and lays out: cantilever
+ok 66 - Example compiles and lays out: cantilever
+  ---
+  duration_ms: 0.301016
+  type: 'test'
+  ...
+# Subtest: Example compiles and lays out: diamond
+ok 67 - Example compiles and lays out: diamond
+  ---
+  duration_ms: 0.310832
+  type: 'test'
+  ...
+# Subtest: Example compiles and lays out: blank
+ok 68 - Example compiles and lays out: blank
+  ---
+  duration_ms: 0.230001
+  type: 'test'
+  ...
+# Subtest: Compiled CPU closures retain the same parameter snapshot as GPU buffers
+ok 69 - Compiled CPU closures retain the same parameter snapshot as GPU buffers
+  ---
+  duration_ms: 0.283531
+  type: 'test'
+  ...
+# Subtest: Volume assets are immutable and structurally shared through history
+ok 70 - Volume assets are immutable and structurally shared through history
+  ---
+  duration_ms: 0.62597
+  type: 'test'
+  ...
+# Subtest: Engineering units and finite display properties are validated
+ok 71 - Engineering units and finite display properties are validated
+  ---
+  duration_ms: 0.27587
+  type: 'test'
+  ...
+# Subtest: Welded marching tetrahedra yield a closed outward-oriented sphere
+ok 72 - Welded marching tetrahedra yield a closed outward-oriented sphere
+  ---
+  duration_ms: 1.323034
+  type: 'test'
+  ...
+# Subtest: Occupancy volume and physical mass approximate analytic sphere
+ok 73 - Occupancy volume and physical mass approximate analytic sphere
+  ---
+  duration_ms: 5.43546
+  type: 'test'
+  ...
+# Subtest: Cancellation aborts sampling and meshing
+ok 74 - Cancellation aborts sampling and meshing
+  ---
+  duration_ms: 3.376462
+  type: 'test'
+  ...
+# Subtest: Nonfinite samplers are rejected
+ok 75 - Nonfinite samplers are rejected
+  ---
+  duration_ms: 0.282359
+  type: 'test'
+  ...
+# Subtest: Binary STL roundtrip preserves triangle count and volume
+ok 76 - Binary STL roundtrip preserves triangle count and volume
+  ---
+  duration_ms: 81.111755
+  type: 'test'
+  ...
+# Subtest: OBJ roundtrip preserves indexed topology
+ok 77 - OBJ roundtrip preserves indexed topology
+  ---
+  duration_ms: 78.911689
+  type: 'test'
+  ...
+# Subtest: OBJ negative indices, inline comments and concave triangulation
+ok 78 - OBJ negative indices, inline comments and concave triangulation
+  ---
+  duration_ms: 0.446673
+  type: 'test'
+  ...
+# Subtest: PLY header and binary payload agree
+ok 79 - PLY header and binary payload agree
+  ---
+  duration_ms: 3.572503
+  type: 'test'
+  ...
+# Subtest: ZIP CRC and 3MF OPC entries
+ok 80 - ZIP CRC and 3MF OPC entries
+  ---
+  duration_ms: 41.356766
+  type: 'test'
+  ...
+# Subtest: BVH signed distance is sign correct and matches the sphere
+ok 81 - BVH signed distance is sign correct and matches the sphere
+  ---
+  duration_ms: 186.332531
+  type: 'test'
+  ...
+# Subtest: Closed mesh implicitization produces a usable padded grid
+ok 82 - Closed mesh implicitization produces a usable padded grid
+  ---
+  duration_ms: 377.171474
+  type: 'test'
+  ...
+# Subtest: Open meshes are refused as solid imports
+ok 83 - Open meshes are refused as solid imports
+  ---
+  duration_ms: 0.428817
+  type: 'test'
+  ...
+# Subtest: SVG section contours follow the analytic sphere circle
+ok 84 - SVG section contours follow the analytic sphere circle
+  ---
+  duration_ms: 8.571705
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/kernel bundle imports outside the workspace
+ok 85 - Standalone @forge/kernel bundle imports outside the workspace
+  ---
+  duration_ms: 13.499882
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/graph bundle imports outside the workspace
+ok 86 - Standalone @forge/graph bundle imports outside the workspace
+  ---
+  duration_ms: 5.972476
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/document bundle imports outside the workspace
+ok 87 - Standalone @forge/document bundle imports outside the workspace
+  ---
+  duration_ms: 8.64234
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/field bundle imports outside the workspace
+ok 88 - Standalone @forge/field bundle imports outside the workspace
+  ---
+  duration_ms: 3.686582
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/lattice bundle imports outside the workspace
+ok 89 - Standalone @forge/lattice bundle imports outside the workspace
+  ---
+  duration_ms: 4.217322
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/compile bundle imports outside the workspace
+ok 90 - Standalone @forge/compile bundle imports outside the workspace
+  ---
+  duration_ms: 14.488559
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/compute bundle imports outside the workspace
+ok 91 - Standalone @forge/compute bundle imports outside the workspace
+  ---
+  duration_ms: 14.240246
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/mesh bundle imports outside the workspace
+ok 92 - Standalone @forge/mesh bundle imports outside the workspace
+  ---
+  duration_ms: 58.248118
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/analysis bundle imports outside the workspace
+ok 93 - Standalone @forge/analysis bundle imports outside the workspace
+  ---
+  duration_ms: 3.738169
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/io bundle imports outside the workspace
+ok 94 - Standalone @forge/io bundle imports outside the workspace
+  ---
+  duration_ms: 4.196069
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/render bundle imports outside the workspace
+ok 95 - Standalone @forge/render bundle imports outside the workspace
+  ---
+  duration_ms: 11.150333
+  type: 'test'
+  ...
+# Subtest: Standalone @forge/ui bundle imports outside the workspace
+ok 96 - Standalone @forge/ui bundle imports outside the workspace
+  ---
+  duration_ms: 10.69697
+  type: 'test'
+  ...
+1..96
+# tests 96
+# suites 0
+# pass 96
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1033.129201

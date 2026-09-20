@@ -1,0 +1,90 @@
+{
+  "format": "implicitforge",
+  "version": 1,
+  "name": "Octet / structural coupon",
+  "description": "Periodic face-diagonal beams with a field-varying strut radius.",
+  "units": "mm",
+  "nodes": [
+    {
+      "id": "n_e7bab47bb11a",
+      "type": "cylinder",
+      "name": "Cylindrical domain",
+      "params": {
+        "radius": 22,
+        "height": 50
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_d7517ee4920d",
+      "type": "ramp",
+      "name": "Strut radius ramp",
+      "params": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "start": -25,
+        "end": 25,
+        "low": 0.6,
+        "high": 1.1
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 165
+      }
+    },
+    {
+      "id": "n_e605125e9d92",
+      "type": "octet",
+      "name": "Octet beam coupon",
+      "params": {
+        "cell": 10,
+        "radius": 0.7
+      },
+      "inputs": {
+        "domain": "n_e7bab47bb11a",
+        "radius": "n_d7517ee4920d"
+      },
+      "position": {
+        "x": 280,
+        "y": 35
+      }
+    }
+  ],
+  "root": "n_e605125e9d92",
+  "assets": {},
+  "domain": {
+    "min": [
+      -30,
+      -30,
+      -34
+    ],
+    "max": [
+      30,
+      30,
+      34
+    ]
+  },
+  "material": {
+    "name": "Aluminium 6061",
+    "density": 2.7,
+    "E": 69000,
+    "nu": 0.33,
+    "conductivity": 167
+  },
+  "view": {
+    "color": [
+      0.6,
+      0.63,
+      0.74
+    ],
+    "roughness": 0.32
+  }
+}

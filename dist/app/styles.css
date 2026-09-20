@@ -1,0 +1,2 @@
+/* The workbench consumes the standalone UI package theme. */
+@import url("../packages/ui/src/styles.css");

@@ -1,0 +1,93 @@
+{
+  "format": "implicitforge",
+  "version": 1,
+  "name": "Gyroid / material study",
+  "description": "A clean field-driven lattice coupon for comparing cell families.",
+  "units": "mm",
+  "nodes": [
+    {
+      "id": "n_64682c9c7fea",
+      "type": "box",
+      "name": "Rounded design domain",
+      "params": {
+        "size": [
+          42,
+          42,
+          42
+        ],
+        "radius": 3
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_80d017e33bd0",
+      "type": "radial",
+      "name": "Radial density gradient",
+      "params": {
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "radius": 32,
+        "inner": 0.8,
+        "outer": 0.32
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 165
+      }
+    },
+    {
+      "id": "n_f0d1fa1cb0a8",
+      "type": "gyroid",
+      "name": "Gyroid coupon",
+      "params": {
+        "cell": 13,
+        "thickness": 0.7
+      },
+      "inputs": {
+        "domain": "n_64682c9c7fea",
+        "thickness": "n_80d017e33bd0"
+      },
+      "position": {
+        "x": 280,
+        "y": 35
+      }
+    }
+  ],
+  "root": "n_f0d1fa1cb0a8",
+  "assets": {},
+  "domain": {
+    "min": [
+      -28,
+      -28,
+      -28
+    ],
+    "max": [
+      28,
+      28,
+      28
+    ]
+  },
+  "material": {
+    "name": "Aluminium 6061",
+    "density": 2.7,
+    "E": 69000,
+    "nu": 0.33,
+    "conductivity": 167
+  },
+  "view": {
+    "color": [
+      0.25,
+      0.68,
+      0.68
+    ],
+    "roughness": 0.32
+  }
+}

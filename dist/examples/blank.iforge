@@ -1,0 +1,37 @@
+{
+  "format": "implicitforge",
+  "version": 1,
+  "name": "Untitled / implicit design",
+  "description": "Start with a primitive, then connect fields and operations.",
+  "units": "mm",
+  "nodes": [],
+  "root": null,
+  "assets": {},
+  "domain": {
+    "min": [
+      -36,
+      -31,
+      -34
+    ],
+    "max": [
+      36,
+      31,
+      34
+    ]
+  },
+  "material": {
+    "name": "Aluminium 6061",
+    "density": 2.7,
+    "E": 69000,
+    "nu": 0.33,
+    "conductivity": 167
+  },
+  "view": {
+    "color": [
+      0.88,
+      0.38,
+      0.17
+    ],
+    "roughness": 0.32
+  }
+}

@@ -1,0 +1,490 @@
+[
+  {
+    "id": "@forge/analysis@0.1.0",
+    "name": "@forge/analysis",
+    "version": "0.1.0",
+    "size": 10714,
+    "unpackedSize": 56228,
+    "shasum": "7b48faceb199091e4151d5516abbb2c4f8af94f0",
+    "integrity": "sha512-p4x6Cah6t36Y/JtU3Ikj+DREvUbwKaG1HZNVbGJIxKMRgwCdiXs/bFOpqZWiK3JOUUwl7SpwAZ5J7FWZCqPOBQ==",
+    "filename": "forge-analysis-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1197,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 29179,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 313,
+        "mode": 420
+      },
+      {
+        "path": "src/fem.js",
+        "size": 16817,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 7639,
+        "mode": 420
+      }
+    ],
+    "entryCount": 6,
+    "bundled": []
+  },
+  {
+    "id": "@forge/compile@0.1.0",
+    "name": "@forge/compile",
+    "version": "0.1.0",
+    "size": 16779,
+    "unpackedSize": 58343,
+    "shasum": "e417127331fd2b29f1b9a93da855b196d4f7b304",
+    "integrity": "sha512-ZgEKpDfaIaHbESklPRKxezqMnP9Ql8lPFcYNcIR/C94Z3gLGj1jLNOhrKsprWJnMvG62dFaK4yi9v7Th89ROAw==",
+    "filename": "forge-compile-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1017,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 42161,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 311,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 13771,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  },
+  {
+    "id": "@forge/compute@0.1.0",
+    "name": "@forge/compute",
+    "version": "0.1.0",
+    "size": 15998,
+    "unpackedSize": 52867,
+    "shasum": "28fceeea1dc819460734aa5c6016dc53e90a7550",
+    "integrity": "sha512-y0jBsb9qHi/lPzxTfxJna0JeGOPfA92qCf/N2/tDXesXACLFFMc5hze/2Ut46HTkxsEKnTDo0uLFgLw+/ePB2Q==",
+    "filename": "forge-compute-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1144,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 39747,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 311,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 10582,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  },
+  {
+    "id": "@forge/document@0.1.0",
+    "name": "@forge/document",
+    "version": "0.1.0",
+    "size": 9494,
+    "unpackedSize": 32754,
+    "shasum": "9fe8b3fbb9b70a3630179edb235f392752645180",
+    "integrity": "sha512-z2e8pHa1G+3x+1n0RunJBlwWp/dn+whKh/fRNn39Peh9gWPEV7gQQQWgu1FToQUStJxLEs/hNEpDc0+znIIN3Q==",
+    "filename": "forge-document-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1059,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 25475,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 313,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 4824,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  },
+  {
+    "id": "@forge/field@0.1.0",
+    "name": "@forge/field",
+    "version": "0.1.0",
+    "size": 5381,
+    "unpackedSize": 16389,
+    "shasum": "70d10f7d70cadc798effddf51135aeb9fd32007e",
+    "integrity": "sha512-is8j0BiN6PjgUKiMVau7eOYGuKbw//WvrPpWDKWojerm1vASPTNEm3Lx8VB8CIHKQqQJGV8YLrPPYCA/U0C/+A==",
+    "filename": "forge-field-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1088,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 9270,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 307,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 4641,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  },
+  {
+    "id": "@forge/graph@0.1.0",
+    "name": "@forge/graph",
+    "version": "0.1.0",
+    "size": 8365,
+    "unpackedSize": 39306,
+    "shasum": "03d5cb07b194ac4a3577c0cbdc614350b990fc1d",
+    "integrity": "sha512-z4UFIv6u2v1jPuqfcMc/seYI6w6Fx7CuEWfvam+gZvgVN8umHDXHNxvs1dRDeaxcgBopqlfV77fNyeovzAN+6Q==",
+    "filename": "forge-graph-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1132,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 20703,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 307,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 16081,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  },
+  {
+    "id": "@forge/io@0.1.0",
+    "name": "@forge/io",
+    "version": "0.1.0",
+    "size": 7704,
+    "unpackedSize": 32097,
+    "shasum": "aee8c962aa28318794f2e06cdc47eae44794a0bb",
+    "integrity": "sha512-wGpmH9i+dS/lmsLocPIL/2eylApJ2NlREkQh9+Ba+v7wje9hUFJojdhjsdjEasab2jKfJPNE/TRU1YXt+Zic4g==",
+    "filename": "forge-io-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1127,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 17117,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 301,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 12469,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  },
+  {
+    "id": "@forge/kernel@0.1.0",
+    "name": "@forge/kernel",
+    "version": "0.1.0",
+    "size": 3697,
+    "unpackedSize": 10784,
+    "shasum": "1cba4e2f1876d36303e8b68cc3e414fcc5007af4",
+    "integrity": "sha512-6Gd220S/xSowAe7v2ULgaoOujw1+6rp3mAzQWSI5G487XKt30MrVi30qTh/tDcy4O7j4jYD8R6NEihgOCcKcIw==",
+    "filename": "forge-kernel-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1156,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 4788,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 309,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 3448,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  },
+  {
+    "id": "@forge/lattice@0.1.0",
+    "name": "@forge/lattice",
+    "version": "0.1.0",
+    "size": 6168,
+    "unpackedSize": 17678,
+    "shasum": "de52767db36de38492161bf1a2a82752ee99aefc",
+    "integrity": "sha512-ntSVlRK2ZsCOEbOluTtpMR+5LXlsfSRCIU+S27eXso4T4XnTQlMaKS+X6KfCnetRIPPoL1v1apYzq5KcgPabqg==",
+    "filename": "forge-lattice-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1042,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 12183,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 311,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 3059,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  },
+  {
+    "id": "@forge/mesh@0.1.0",
+    "name": "@forge/mesh",
+    "version": "0.1.0",
+    "size": 8176,
+    "unpackedSize": 37794,
+    "shasum": "eee48f52615feba17b482487d6922d5c04cebe47",
+    "integrity": "sha512-qFA+Jh+UzT8jFAqsRwctSSjzhdHFJXLaW/xsvezdEB0W+mh1dYRzA3tYVhyfAPuaZPU+FEQjQuNuhhAs/6rvCg==",
+    "filename": "forge-mesh-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1104,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 19871,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 305,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 15431,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  },
+  {
+    "id": "@forge/render@0.1.0",
+    "name": "@forge/render",
+    "version": "0.1.0",
+    "size": 36865,
+    "unpackedSize": 123061,
+    "shasum": "0e5aeff6174f90323b6c6de75fbc89cc252c8a49",
+    "integrity": "sha512-ECTjfSdvCvjnC3edAVUNPmh1zpmM2Wtaj7SOH31ss7gxd4USE9QRlG6XOrULrgPCzoG3nBACIGK73axwhS2ZRg==",
+    "filename": "forge-render-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1066,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 90324,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 309,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 23674,
+        "mode": 420
+      },
+      {
+        "path": "src/software.js",
+        "size": 6605,
+        "mode": 420
+      }
+    ],
+    "entryCount": 6,
+    "bundled": []
+  },
+  {
+    "id": "@forge/ui@0.1.0",
+    "name": "@forge/ui",
+    "version": "0.1.0",
+    "size": 34748,
+    "unpackedSize": 146537,
+    "shasum": "745d46b51c5b094aa53e5653dc9eaeea0dd7eef6",
+    "integrity": "sha512-VZGYH25AyiQw5TYmPtz/JelD5y9NvDLYAy0Kr1Aw4ZRFJXgk5dkPCg9LG+mIB88vh4SE3+n4F25DFZlqo6hjKw==",
+    "filename": "forge-ui-0.1.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 1083,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 1136,
+        "mode": 420
+      },
+      {
+        "path": "dist/index.js",
+        "size": 37050,
+        "mode": 420
+      },
+      {
+        "path": "dist/styles.css",
+        "size": 45293,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 372,
+        "mode": 420
+      },
+      {
+        "path": "src/index.js",
+        "size": 16310,
+        "mode": 420
+      },
+      {
+        "path": "src/styles.css",
+        "size": 45293,
+        "mode": 420
+      }
+    ],
+    "entryCount": 7,
+    "bundled": []
+  }
+]

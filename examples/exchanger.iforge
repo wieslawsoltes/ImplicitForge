@@ -1,0 +1,258 @@
+{
+  "format": "implicitforge",
+  "version": 1,
+  "name": "Aero / graded heat exchanger",
+  "description": "A field-graded gyroid core with machined manifolds and a central flow passage.",
+  "units": "mm",
+  "nodes": [
+    {
+      "id": "n_51e9f833fd7b",
+      "type": "box",
+      "name": "Core envelope",
+      "params": {
+        "size": [
+          46,
+          36,
+          42
+        ],
+        "radius": 3
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_6c058c65c1ed",
+      "type": "ramp",
+      "name": "Axial wall gradient",
+      "params": {
+        "direction": [
+          0,
+          0,
+          1
+        ],
+        "start": -21,
+        "end": 21,
+        "low": 0.36,
+        "high": 0.72
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 165
+      }
+    },
+    {
+      "id": "n_659c7bf8846b",
+      "type": "gyroid",
+      "name": "Graded gyroid core",
+      "params": {
+        "cell": 10.5,
+        "thickness": 0.55
+      },
+      "inputs": {
+        "domain": "n_51e9f833fd7b",
+        "thickness": "n_6c058c65c1ed"
+      },
+      "position": {
+        "x": 280,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_9ad574019a57",
+      "type": "box",
+      "name": "Manifold blank",
+      "params": {
+        "size": [
+          56,
+          46,
+          4
+        ],
+        "radius": 1.6
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 295
+      }
+    },
+    {
+      "id": "n_61775fbd1c2f",
+      "type": "translate",
+      "name": "Lower manifold",
+      "params": {
+        "offset": [
+          0,
+          0,
+          -22.5
+        ]
+      },
+      "inputs": {
+        "body": "n_9ad574019a57"
+      },
+      "position": {
+        "x": 280,
+        "y": 165
+      }
+    },
+    {
+      "id": "n_da42044bd4ee",
+      "type": "translate",
+      "name": "Upper manifold",
+      "params": {
+        "offset": [
+          0,
+          0,
+          22.5
+        ]
+      },
+      "inputs": {
+        "body": "n_9ad574019a57"
+      },
+      "position": {
+        "x": 280,
+        "y": 295
+      }
+    },
+    {
+      "id": "n_143d039ab51d",
+      "type": "union",
+      "name": "Manifold pair",
+      "params": {},
+      "inputs": {
+        "a": "n_61775fbd1c2f",
+        "b": "n_da42044bd4ee"
+      },
+      "position": {
+        "x": 525,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_d6e9d7dd466b",
+      "type": "union",
+      "name": "Core + manifolds",
+      "params": {},
+      "inputs": {
+        "a": "n_659c7bf8846b",
+        "b": "n_143d039ab51d"
+      },
+      "position": {
+        "x": 770,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_529371ddb71b",
+      "type": "cylinder",
+      "name": "Flow passage",
+      "params": {
+        "radius": 6,
+        "height": 64
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 425
+      }
+    },
+    {
+      "id": "n_009c084f852f",
+      "type": "subtract",
+      "name": "Open flow passage",
+      "params": {},
+      "inputs": {
+        "a": "n_d6e9d7dd466b",
+        "b": "n_529371ddb71b"
+      },
+      "position": {
+        "x": 1015,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_45005e9fa27a",
+      "type": "cylinder",
+      "name": "Fastener tool",
+      "params": {
+        "radius": 2.15,
+        "height": 64
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 555
+      }
+    },
+    {
+      "id": "n_dfec39de9ec8",
+      "type": "repeat",
+      "name": "Mounting pattern",
+      "params": {
+        "spacing": [
+          23,
+          18,
+          70
+        ],
+        "count": [
+          3,
+          3,
+          1
+        ]
+      },
+      "inputs": {
+        "body": "n_45005e9fa27a"
+      },
+      "position": {
+        "x": 280,
+        "y": 425
+      }
+    },
+    {
+      "id": "n_3a6635d50b56",
+      "type": "subtract",
+      "name": "Heat exchanger",
+      "params": {},
+      "inputs": {
+        "a": "n_009c084f852f",
+        "b": "n_dfec39de9ec8"
+      },
+      "position": {
+        "x": 1260,
+        "y": 35
+      }
+    }
+  ],
+  "root": "n_3a6635d50b56",
+  "assets": {},
+  "domain": {
+    "min": [
+      -36,
+      -31,
+      -34
+    ],
+    "max": [
+      36,
+      31,
+      34
+    ]
+  },
+  "material": {
+    "name": "Aluminium 6061",
+    "density": 2.7,
+    "E": 69000,
+    "nu": 0.33,
+    "conductivity": 167
+  },
+  "view": {
+    "color": [
+      0.91,
+      0.4,
+      0.2
+    ],
+    "roughness": 0.32
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "format": "implicitforge",
+  "version": 1,
+  "name": "Cantilever / analysis benchmark",
+  "description": "A solid cantilever for finite-element and topology-optimization experiments.",
+  "units": "mm",
+  "nodes": [
+    {
+      "id": "n_35dd7bcfaf52",
+      "type": "box",
+      "name": "Cantilever design space",
+      "params": {
+        "size": [
+          58,
+          20,
+          20
+        ],
+        "radius": 0.5
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 35
+      }
+    }
+  ],
+  "root": "n_35dd7bcfaf52",
+  "assets": {},
+  "domain": {
+    "min": [
+      -30,
+      -12,
+      -12
+    ],
+    "max": [
+      30,
+      12,
+      12
+    ]
+  },
+  "material": {
+    "name": "Aluminium 6061",
+    "density": 2.7,
+    "E": 69000,
+    "nu": 0.33,
+    "conductivity": 167
+  },
+  "view": {
+    "color": [
+      0.49,
+      0.62,
+      0.82
+    ],
+    "roughness": 0.32
+  }
+}

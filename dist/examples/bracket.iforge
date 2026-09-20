@@ -1,0 +1,189 @@
+{
+  "format": "implicitforge",
+  "version": 1,
+  "name": "Bracket / lightweight mount",
+  "description": "A connected mount with an implicit fillet and two mounting holes.",
+  "units": "mm",
+  "nodes": [
+    {
+      "id": "n_fa2d3184b1ec",
+      "type": "box",
+      "name": "Horizontal leg",
+      "params": {
+        "size": [
+          58,
+          34,
+          7
+        ],
+        "radius": 2
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_ee3b67d3c5b6",
+      "type": "box",
+      "name": "Vertical leg",
+      "params": {
+        "size": [
+          7,
+          34,
+          50
+        ],
+        "radius": 2
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 165
+      }
+    },
+    {
+      "id": "n_9d2a7668b8d3",
+      "type": "translate",
+      "name": "Locate upright",
+      "params": {
+        "offset": [
+          -25,
+          0,
+          21.5
+        ]
+      },
+      "inputs": {
+        "body": "n_ee3b67d3c5b6"
+      },
+      "position": {
+        "x": 280,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_0f5b4d5f7c89",
+      "type": "smoothUnion",
+      "name": "Filleted bracket",
+      "params": {
+        "radius": 7
+      },
+      "inputs": {
+        "a": "n_fa2d3184b1ec",
+        "b": "n_9d2a7668b8d3"
+      },
+      "position": {
+        "x": 525,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_85f1eb9d2e4b",
+      "type": "cylinder",
+      "name": "Mount hole tool",
+      "params": {
+        "radius": 3.8,
+        "height": 100
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 295
+      }
+    },
+    {
+      "id": "n_f586e6feced0",
+      "type": "translate",
+      "name": "Mount hole A",
+      "params": {
+        "offset": [
+          15,
+          9,
+          0
+        ]
+      },
+      "inputs": {
+        "body": "n_85f1eb9d2e4b"
+      },
+      "position": {
+        "x": 280,
+        "y": 165
+      }
+    },
+    {
+      "id": "n_c70adb52f0da",
+      "type": "translate",
+      "name": "Mount hole B",
+      "params": {
+        "offset": [
+          15,
+          -9,
+          0
+        ]
+      },
+      "inputs": {
+        "body": "n_85f1eb9d2e4b"
+      },
+      "position": {
+        "x": 280,
+        "y": 295
+      }
+    },
+    {
+      "id": "n_6a9ced7e3fd7",
+      "type": "union",
+      "name": "Mount holes",
+      "params": {},
+      "inputs": {
+        "a": "n_f586e6feced0",
+        "b": "n_c70adb52f0da"
+      },
+      "position": {
+        "x": 525,
+        "y": 165
+      }
+    },
+    {
+      "id": "n_10db93c73b95",
+      "type": "subtract",
+      "name": "Bracket",
+      "params": {},
+      "inputs": {
+        "a": "n_0f5b4d5f7c89",
+        "b": "n_6a9ced7e3fd7"
+      },
+      "position": {
+        "x": 770,
+        "y": 35
+      }
+    }
+  ],
+  "root": "n_10db93c73b95",
+  "assets": {},
+  "domain": {
+    "min": [
+      -37,
+      -26,
+      -12
+    ],
+    "max": [
+      37,
+      26,
+      55
+    ]
+  },
+  "material": {
+    "name": "Aluminium 6061",
+    "density": 2.7,
+    "E": 69000,
+    "nu": 0.33,
+    "conductivity": 167
+  },
+  "view": {
+    "color": [
+      0.32,
+      0.58,
+      0.79
+    ],
+    "roughness": 0.32
+  }
+}

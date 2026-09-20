@@ -1,0 +1,90 @@
+{
+  "format": "implicitforge",
+  "version": 1,
+  "name": "Toroid / Schwarz lattice",
+  "description": "Triply periodic shelling in a toroidal design space.",
+  "units": "mm",
+  "nodes": [
+    {
+      "id": "n_f317befadb77",
+      "type": "torus",
+      "name": "Toroidal envelope",
+      "params": {
+        "major": 22,
+        "minor": 9
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 35
+      }
+    },
+    {
+      "id": "n_8f0700268abe",
+      "type": "sine",
+      "name": "Circumferential grading",
+      "params": {
+        "direction": [
+          1,
+          1,
+          0
+        ],
+        "period": 46,
+        "base": 0.48,
+        "amplitude": 0.15,
+        "phase": 0
+      },
+      "inputs": {},
+      "position": {
+        "x": 35,
+        "y": 165
+      }
+    },
+    {
+      "id": "n_bb9448413a21",
+      "type": "schwarz",
+      "name": "Schwarz P toroid",
+      "params": {
+        "cell": 10,
+        "thickness": 0.6
+      },
+      "inputs": {
+        "domain": "n_f317befadb77",
+        "thickness": "n_8f0700268abe"
+      },
+      "position": {
+        "x": 280,
+        "y": 35
+      }
+    }
+  ],
+  "root": "n_bb9448413a21",
+  "assets": {},
+  "domain": {
+    "min": [
+      -36,
+      -36,
+      -20
+    ],
+    "max": [
+      36,
+      36,
+      20
+    ]
+  },
+  "material": {
+    "name": "Aluminium 6061",
+    "density": 2.7,
+    "E": 69000,
+    "nu": 0.33,
+    "conductivity": 167
+  },
+  "view": {
+    "color": [
+      0.75,
+      0.64,
+      0.33
+    ],
+    "roughness": 0.32
+  }
+}

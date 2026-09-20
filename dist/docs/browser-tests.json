@@ -1,0 +1,123 @@
+{
+  "tests": [
+    {
+      "name": "Portable startup, real surface rendering and worker evaluation",
+      "status": "passed",
+      "details": {
+        "backend": "CPU raster",
+        "nodes": 13,
+        "volume": 37304.9795175239,
+        "webgpu": false,
+        "secure": false
+      }
+    },
+    {
+      "name": "Parameter editing, undo and redo through UI",
+      "status": "passed"
+    },
+    {
+      "name": "Block duplication and reversible document transaction",
+      "status": "passed"
+    },
+    {
+      "name": "Add a primitive, set output and compile the edited field",
+      "status": "passed"
+    },
+    {
+      "name": "Independent worker volume calculation for new output",
+      "status": "passed"
+    },
+    {
+      "name": "Graph pointer dragging commits node coordinates",
+      "status": "passed"
+    },
+    {
+      "name": "Section plane changes visualization without mutating the model",
+      "status": "passed"
+    },
+    {
+      "name": "Save project produces parseable full graph JSON",
+      "status": "passed"
+    },
+    {
+      "name": "Real binary STL export ignores display clipping and closes correctly",
+      "status": "passed",
+      "details": {
+        "triangles": 22320,
+        "volume": 14101.109828023957
+      }
+    },
+    {
+      "name": "Scalar field workspace and coloring",
+      "status": "passed"
+    },
+    {
+      "name": "Hex8 FEM worker solve and stress visualization",
+      "status": "passed",
+      "details": {
+        "converged": true,
+        "residual": 6.871801955285687e-08,
+        "displacement": 0.003772143836610001,
+        "elements": 125
+      }
+    },
+    {
+      "name": "Thermal worker solve and convergence reporting",
+      "status": "passed",
+      "details": {
+        "converged": true,
+        "residual": 0.0008108808649751609,
+        "imbalance": -1.2818281408190488
+      }
+    },
+    {
+      "name": "Parameter sweep changes measured volume without changing the document",
+      "status": "passed",
+      "details": [
+        24746.175721213116,
+        23405.473822634995,
+        21110.373962357193
+      ]
+    },
+    {
+      "name": "SIMP optimization runs through UI",
+      "status": "passed",
+      "details": {
+        "iterations": 4,
+        "fraction": 0.3999998315228789
+      }
+    },
+    {
+      "name": "Optimized density is converted to a new editable implicit-volume block",
+      "status": "passed"
+    },
+    {
+      "name": "Cancellation rejects stale worker result commits",
+      "status": "passed"
+    },
+    {
+      "name": "Project file reopen restores the modeled body",
+      "status": "passed"
+    },
+    {
+      "name": "STL import, BVH signed distance and reconstructed implicit body",
+      "status": "passed"
+    },
+    {
+      "name": "Light/dark theme and narrow viewport layout",
+      "status": "passed"
+    },
+    {
+      "name": "Command palette keyboard execution and guide dialog",
+      "status": "passed"
+    },
+    {
+      "name": "No uncaught exceptions or console errors during regression run",
+      "status": "passed"
+    }
+  ],
+  "durationSeconds": 29.24,
+  "pageErrors": [],
+  "consoleErrors": [],
+  "gpuValidation": "Not exercised: GPU APIs unavailable in managed test browser. Run tests/gpu.html on a WebGPU-capable secure origin."
+}

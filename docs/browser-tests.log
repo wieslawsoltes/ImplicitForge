@@ -1,0 +1,21 @@
+PASS Portable startup, real surface rendering and worker evaluation {'backend': 'CPU raster', 'nodes': 13, 'volume': 37304.9795175239, 'webgpu': False, 'secure': False}
+PASS Parameter editing, undo and redo through UI 
+PASS Block duplication and reversible document transaction 
+PASS Add a primitive, set output and compile the edited field 
+PASS Independent worker volume calculation for new output 
+PASS Graph pointer dragging commits node coordinates 
+PASS Section plane changes visualization without mutating the model 
+PASS Save project produces parseable full graph JSON 
+PASS Real binary STL export ignores display clipping and closes correctly {'triangles': 22320, 'volume': 14101.109828023957}
+PASS Scalar field workspace and coloring 
+PASS Hex8 FEM worker solve and stress visualization {'converged': True, 'residual': 6.871801955285687e-08, 'displacement': 0.003772143836610001, 'elements': 125}
+PASS Thermal worker solve and convergence reporting {'converged': True, 'residual': 0.0008108808649751609, 'imbalance': -1.2818281408190488}
+PASS Parameter sweep changes measured volume without changing the document [24746.175721213116, 23405.473822634995, 21110.373962357193]
+PASS SIMP optimization runs through UI {'iterations': 4, 'fraction': 0.3999998315228789}
+PASS Optimized density is converted to a new editable implicit-volume block 
+PASS Cancellation rejects stale worker result commits 
+PASS Project file reopen restores the modeled body 
+PASS STL import, BVH signed distance and reconstructed implicit body 
+PASS Light/dark theme and narrow viewport layout 
+PASS Command palette keyboard execution and guide dialog 
+PASS No uncaught exceptions or console errors during regression run 
